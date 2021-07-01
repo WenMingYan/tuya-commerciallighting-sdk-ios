@@ -2,6 +2,10 @@
 
 [English](README.md) | [中文版](README-zh.md)
 
+![Pod version](http://img.shields.io/cocoapods/v/TuyaSmartCommercialLightingSdk.svg?style=flat)
+![Platform info](http://img.shields.io/cocoapods/p/TuyaSmartCommercialLightingSdk.svg?style=flat)
+[![Support](https://img.shields.io/badge/support-iOS9.0+-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+
 ---
 
 ## Overview
