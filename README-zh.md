@@ -1,5 +1,9 @@
 #  商用照明 iOS SDK
 
+![Pod version](http://img.shields.io/cocoapods/v/TuyaSmartCommercialLightingSdk.svg?style=flat)
+![Platform info](http://img.shields.io/cocoapods/p/TuyaSmartCommercialLightingSdk.svg?style=flat)
+[![Support](https://img.shields.io/badge/support-iOS10.0+-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+
 [中文版](README-zh.md) | [English](README.md)
 
 ---
