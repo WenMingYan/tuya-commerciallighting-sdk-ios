@@ -73,13 +73,7 @@ For more information about CocoaPods, see [CocoaPods Guides](https://guides.coco
 
 All the preparation steps are finished. You can use the SDK to develop your application.
 
-
-
-<figure class="third">
-    <img src="./images/demo-1.png" width = "300"/>
-    <img src="./images/demo-2.png" width = "300"/>
-    <img src="./images/demo-3.png" width = "300"/>
-</figure>
+<p> <img src="./images/demo-1.png" width = "300" / style='vertical-align:middle; display:inline;'>	<img src="./images/demo-2.png" width = "300" / style='vertical-align:middle; display:inline;'> <img src="./images/demo-3.png" width = "300" / style='vertical-align:middle; display:inline;'> </p>
 
 
 ## References
