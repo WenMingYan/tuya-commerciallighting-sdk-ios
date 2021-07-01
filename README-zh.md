@@ -76,6 +76,16 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 至此，准备工作已经全部完毕，可以开始App开发啦。
 
+
+
+<figure class="third">
+    <img src="./images/demo-1.png" width = "300"/>
+    <img src="./images/demo-2.png" width = "300"/>
+    <img src="./images/demo-3.png" width = "300"/>
+</figure>
+
+
+
 ## 开发文档
 
 更多请参考: [商用照明 App SDK iOS 版](https://developer.tuya.com/cn/docs/app-development/commercial-lighting-app-sdk-for-ios?id=Kalj8f5wlhcsz)

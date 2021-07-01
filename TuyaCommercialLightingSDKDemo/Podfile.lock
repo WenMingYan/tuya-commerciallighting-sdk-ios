@@ -1,0 +1,93 @@
+PODS:
+  - CocoaAsyncSocket (7.6.5)
+  - Masonry (1.1.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SVProgressHUD (2.2.5)
+  - TuyaSmartActivatorCoreKit (3.26.5):
+    - TuyaSmartDeviceCoreKit
+  - TuyaSmartBaseKit (3.26.5):
+    - TuyaSmartUtil
+    - YYModel
+  - TuyaSmartBLEKit (3.27.5):
+    - TuyaSmartBaseKit
+    - TuyaSmartDeviceCoreKit (>= 3.20.0)
+    - TYBluetooth (< 10.0)
+  - TuyaSmartBLEMeshKit (3.26.5):
+    - TuyaSmartActivatorCoreKit
+    - TuyaSmartBaseKit
+    - TuyaSmartBLEKit
+    - TuyaSmartDeviceCoreKit (>= 3.20.0)
+    - TYBluetooth (< 10.0)
+  - TuyaSmartCommercialLightingSdk (1.9.6-rc.16):
+    - TuyaSmartBLEMeshKit (= 3.26.5)
+    - TuyaSmartDeviceCoreKit (= 3.25.0)
+    - TuyaSmartUserToBKit (= 3.26.6)
+  - TuyaSmartDeviceCoreKit (3.25.0):
+    - TuyaSmartBaseKit (>= 3.25.0)
+    - TuyaSmartMQTTChannelKit (>= 3.24.0)
+    - TuyaSmartSocketChannelKit (>= 3.24.0)
+    - TuyaSmartUtil (>= 3.23.0)
+  - TuyaSmartMQTTChannelKit (3.26.5):
+    - TuyaSmartBaseKit
+    - TuyaSmartQUIC
+  - TuyaSmartQUIC (1.1.1)
+  - TuyaSmartSocketChannelKit (3.27.1):
+    - CocoaAsyncSocket (>= 7.4.3)
+    - TuyaSmartBaseKit
+  - TuyaSmartUserToBKit (3.26.6):
+    - TuyaSmartBaseKit
+  - TuyaSmartUtil (3.26.6)
+  - TYBluetooth (3.27.5)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Masonry
+  - SDWebImage
+  - SVProgressHUD
+  - TuyaSmartCommercialLightingSdk (= 1.9.6-rc.16)
+  - TuyaSmartUserToBKit (= 3.26.6)
+
+SPEC REPOS:
+  https://cdn.cocoapods.org/:
+    - CocoaAsyncSocket
+    - Masonry
+    - SDWebImage
+    - SVProgressHUD
+    - TuyaSmartActivatorCoreKit
+    - TuyaSmartBaseKit
+    - TuyaSmartBLEKit
+    - TuyaSmartBLEMeshKit
+    - TuyaSmartCommercialLightingSdk
+    - TuyaSmartDeviceCoreKit
+    - TuyaSmartMQTTChannelKit
+    - TuyaSmartQUIC
+    - TuyaSmartSocketChannelKit
+    - TuyaSmartUserToBKit
+    - TuyaSmartUtil
+    - TYBluetooth
+    - YYModel
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TuyaSmartActivatorCoreKit: d509bda43cca84efb422d7d54a44f6da4eb85f29
+  TuyaSmartBaseKit: 8d32545fabb4967b81c14a7593e30b82b5125b95
+  TuyaSmartBLEKit: 9bdebd5b8c7b3b7105d1a5358ca82c11e5d17bf6
+  TuyaSmartBLEMeshKit: 1c77750da1e3320e42fe830506ab7318b6fa013d
+  TuyaSmartCommercialLightingSdk: e67e6017e5481054cfa8a0a65569c5000181060b
+  TuyaSmartDeviceCoreKit: 25ebffe2da7d8a122e26fb487826ad2bb8279367
+  TuyaSmartMQTTChannelKit: 6036218cb962b5482fe087457e960082669efe5f
+  TuyaSmartQUIC: 5bb81563fedf5b739ac50a5abbf42ec807cfb64b
+  TuyaSmartSocketChannelKit: 32cea8e1bc03432ad244d13199e90ecba175aeb4
+  TuyaSmartUserToBKit: 2e0b623419f1bc8f516c118b3b60a4b666a6e0f9
+  TuyaSmartUtil: f43d2102d6bc5888aac9aefa9e1fb6f16e1ba852
+  TYBluetooth: e6e7870dd54e9318721f78476dee0ddbef00aeec
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 0c5506021f92af619ceaa75599433ce79694bb09
+
+COCOAPODS: 1.9.3

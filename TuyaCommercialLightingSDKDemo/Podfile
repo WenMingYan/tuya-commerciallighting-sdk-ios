@@ -1,0 +1,18 @@
+
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '10.0'
+
+target 'TuyaLightingTempDemo' do
+  
+  pod 'TuyaSmartCommercialLightingSdk', '1.9.6'
+  pod 'TuyaSmartUserToBKit', '3.26.6'
+  
+  pod 'Masonry'
+  pod 'SDWebImage'
+  pod 'SVProgressHUD'
+  
+  
+  
+  
+end

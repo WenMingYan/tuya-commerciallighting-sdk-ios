@@ -1,6 +1,6 @@
 # Tuya Smart Commercial Lighting SDK
 
-[English](README.md)|[中文版](README-zh.md)
+[English](README.md) | [中文版](README-zh.md)
 
 ---
 
@@ -72,6 +72,14 @@ For more information about CocoaPods, see [CocoaPods Guides](https://guides.coco
 ```
 
 All the preparation steps are finished. You can use the SDK to develop your application.
+
+
+
+<figure class="third">
+    <img src="./images/demo-1.png" width = "300"/>
+    <img src="./images/demo-2.png" width = "300"/>
+    <img src="./images/demo-3.png" width = "300"/>
+</figure>
 
 
 ## References
