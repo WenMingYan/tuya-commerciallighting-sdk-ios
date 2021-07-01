@@ -78,11 +78,11 @@ CocoaPods 的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 
 
-<figure class="third">
-    <img src="./images/demo-1.png" width = "260"/>
-    <img src="./images/demo-2.png" width = "260"/>
-    <img src="./images/demo-3.png" width = "260"/>
-</figure>
+ <center class="half">
+    <img src="./images/demo-1.png" width = "300"/>
+    <img src="./images/demo-2.png" width = "300"/>
+    <img src="./images/demo-3.png" width = "300"/>
+</center>
 
 
 
