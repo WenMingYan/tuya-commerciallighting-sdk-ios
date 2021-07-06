@@ -45,7 +45,7 @@ SDK 主要包括以下功能：
 
 ### 使用 Cocoapods 集成
 
-在 `Podfile` 文件中添加以下内容：
+在 `Podfile` 文件中添加以下内容（Cocoapods 请使用 1.10.0 及以上版本）：
 
 ```ruby
 platform :ios, '10.0'
