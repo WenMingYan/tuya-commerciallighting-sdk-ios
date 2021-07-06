@@ -42,7 +42,7 @@ The SDK includes the following functions:
 
 ## Efficient integration
 
-### Use CocoaPods integration (version 9.0 or later is supported)
+### Use CocoaPods integration (version 1.10.0 or later is supported)
 
 Add the following content in the file `Podfile`:
 
