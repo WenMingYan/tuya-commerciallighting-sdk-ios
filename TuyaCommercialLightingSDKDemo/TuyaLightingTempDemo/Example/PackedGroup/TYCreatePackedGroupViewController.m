@@ -84,11 +84,13 @@
                                                              areaId:self.areaId
                                                       groupPackName:alertC.textFields.firstObject.text
                                                          addDevices:self.selectDevices
-                                                        topCategory:TuyaSmartTopCategoryZM
-                                                           complete:^(TuyaSmartPackedGroupModel * _Nonnull group, NSDictionary<NSString *, NSNumber *> * _Nonnull failedInfos) {
+                                                        topCategory:TuyaSmartTopCategoryZM success:^(TuyaSmartPackedGroupModel * _Nonnull groupModel, NSArray<NSString *> * _Nonnull successDevIds, NSDictionary<NSString *,NSNumber *> * _Nonnull failedInfos) {
             [SVProgressHUD dismiss];
             [self dismissViewControllerAnimated:YES completion:NULL];
+        } failure:^(NSError *error) {
+            [SVProgressHUD showErrorWithStatus:error.localizedFailureReason];
         }];
+        
     }];
     
     [alertC addAction:cancelAction];

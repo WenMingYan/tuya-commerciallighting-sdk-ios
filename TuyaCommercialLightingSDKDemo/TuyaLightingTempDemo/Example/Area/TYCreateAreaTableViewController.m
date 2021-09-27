@@ -60,7 +60,7 @@
             [SVProgressHUD dismiss];
             [self dismissViewControllerAnimated:YES completion:NULL];
         } failure:^(NSError *error) {
-            [SVProgressHUD dismiss];
+            [SVProgressHUD showErrorWithStatus:error.localizedFailureReason];
         }];
     }
 }

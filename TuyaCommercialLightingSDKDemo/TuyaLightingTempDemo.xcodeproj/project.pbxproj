@@ -11,11 +11,27 @@
 		27650CCD2664E0D500078506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27650CCC2664E0D500078506 /* Assets.xcassets */; };
 		27650CD02664E0D500078506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27650CCE2664E0D500078506 /* LaunchScreen.storyboard */; };
 		27650CD32664E0D500078506 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27650CD22664E0D500078506 /* main.m */; };
-		27650CE626650C5800078506 /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27650CE526650C5800078506 /* TYLoginViewController.m */; };
-		27650CEF2665E36A00078506 /* TYAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27650CEE2665E36A00078506 /* TYAuthViewController.m */; };
-		27650CF226661B2400078506 /* TYPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27650CF126661B2400078506 /* TYPasswordViewController.m */; };
 		27650CFD26663C3300078506 /* TYProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27650CFC26663C3300078506 /* TYProjectViewController.m */; };
-		27650D05266654F900078506 /* CALayer+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 27650D04266654F900078506 /* CALayer+Common.m */; };
+		7A35CECE2701695600D05B04 /* TYCreatePackedGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CECB2701695600D05B04 /* TYCreatePackedGroupViewController.m */; };
+		7A35CECF2701695600D05B04 /* TYEditPackedGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CECD2701695600D05B04 /* TYEditPackedGroupViewController.m */; };
+		7A35CED7270169BB00D05B04 /* TYMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CED5270169BA00D05B04 /* TYMeTableViewController.m */; };
+		7A35CEE3270169C000D05B04 /* APModeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CEDE270169C000D05B04 /* APModeTableViewController.m */; };
+		7A35CEE4270169C000D05B04 /* DualModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CEDF270169C000D05B04 /* DualModelTableViewController.m */; };
+		7A35CEE5270169C000D05B04 /* BLEModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CEE0270169C000D05B04 /* BLEModelViewController.m */; };
+		7A35CEE6270169C000D05B04 /* SIGMeshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CEE1270169C000D05B04 /* SIGMeshTableViewController.m */; };
+		7A35CEE7270169C000D05B04 /* EZModeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A35CEE2270169C000D05B04 /* EZModeTableViewController.m */; };
+		7A9FC55E270175E000D4ACD6 /* DualModel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9FC554270175E000D4ACD6 /* DualModel.storyboard */; };
+		7A9FC55F270175E000D4ACD6 /* EZMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9FC556270175E000D4ACD6 /* EZMode.storyboard */; };
+		7A9FC560270175E000D4ACD6 /* SIGMesh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9FC558270175E000D4ACD6 /* SIGMesh.storyboard */; };
+		7A9FC561270175E000D4ACD6 /* APMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9FC55A270175E000D4ACD6 /* APMode.storyboard */; };
+		7A9FC562270175E000D4ACD6 /* BLE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9FC55C270175E000D4ACD6 /* BLE.storyboard */; };
+		7A9FC57A2701790800D4ACD6 /* TYAddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC5792701790800D4ACD6 /* TYAddDeviceViewController.m */; };
+		7A9FC5942701BE3A00D4ACD6 /* TYAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC58B2701BE3A00D4ACD6 /* TYAuthViewController.m */; };
+		7A9FC5952701BE3A00D4ACD6 /* TYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC58C2701BE3A00D4ACD6 /* TYLoginViewController.m */; };
+		7A9FC5962701BE3A00D4ACD6 /* TYPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC58F2701BE3A00D4ACD6 /* TYPasswordViewController.m */; };
+		7A9FC5972701BE3A00D4ACD6 /* TYTicketLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC5922701BE3A00D4ACD6 /* TYTicketLoginViewController.m */; };
+		7A9FC5982701BE3A00D4ACD6 /* TYWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC5932701BE3A00D4ACD6 /* TYWelcomeViewController.m */; };
+		7A9FC59C2701C53C00D4ACD6 /* CALayer+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9FC59B2701C53C00D4ACD6 /* CALayer+Common.m */; };
 		C19C4A9B9955A891A294FEEB /* libPods-TuyaLightingTempDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0A4F75CDBD5F164503D8B4 /* libPods-TuyaLightingTempDemo.a */; };
 		DF5D7695267394D9002B1D4A /* TYAreaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5D7694267394D9002B1D4A /* TYAreaListViewController.m */; };
 		DF5D76AD26739D67002B1D4A /* TYCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5D76AC26739D67002B1D4A /* TYCacheManager.m */; };
@@ -26,12 +42,7 @@
 		DF6790252682489A005B9A2C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF6790272682489A005B9A2C /* Localizable.strings */; };
 		DF881A62267A1828003C6867 /* TYCreateProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF881A61267A1828003C6867 /* TYCreateProjectTableViewController.m */; };
 		DF881B7D267A2345003C6867 /* TYCreateAreaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF881B7C267A2345003C6867 /* TYCreateAreaTableViewController.m */; };
-		DFAB7F472680972400743CF4 /* TYCreatePackedGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAB7F462680972400743CF4 /* TYCreatePackedGroupViewController.m */; };
-		DFAB7F4B2680CD4100743CF4 /* TYEditPackedGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAB7F4A2680CD4100743CF4 /* TYEditPackedGroupViewController.m */; };
 		DFAB7F9426822C1900743CF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAB7F9626822C1900743CF4 /* Main.storyboard */; };
-		DFC486DA268ACB940068483F /* TYTicketLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC486D9268ACB940068483F /* TYTicketLoginViewController.m */; };
-		DFC486DE268ACC6B0068483F /* TYWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC486DD268ACC6B0068483F /* TYWelcomeViewController.m */; };
-		DFF3C807267B2FFD000D8AE0 /* TYMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF3C806267B2FFD000D8AE0 /* TYMeTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,16 +54,48 @@
 		27650CCF2664E0D500078506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27650CD12664E0D500078506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27650CD22664E0D500078506 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		27650CE426650C5800078506 /* TYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYLoginViewController.h; sourceTree = "<group>"; };
-		27650CE526650C5800078506 /* TYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
-		27650CED2665E36A00078506 /* TYAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYAuthViewController.h; sourceTree = "<group>"; };
-		27650CEE2665E36A00078506 /* TYAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYAuthViewController.m; sourceTree = "<group>"; };
-		27650CF026661B2400078506 /* TYPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPasswordViewController.h; sourceTree = "<group>"; };
-		27650CF126661B2400078506 /* TYPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPasswordViewController.m; sourceTree = "<group>"; };
 		27650CFB26663C3300078506 /* TYProjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYProjectViewController.h; sourceTree = "<group>"; };
 		27650CFC26663C3300078506 /* TYProjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYProjectViewController.m; sourceTree = "<group>"; };
-		27650D03266654F900078506 /* CALayer+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Common.h"; sourceTree = "<group>"; };
-		27650D04266654F900078506 /* CALayer+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Common.m"; sourceTree = "<group>"; };
+		7A35CECA2701695500D05B04 /* TYCreatePackedGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYCreatePackedGroupViewController.h; sourceTree = "<group>"; };
+		7A35CECB2701695600D05B04 /* TYCreatePackedGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCreatePackedGroupViewController.m; sourceTree = "<group>"; };
+		7A35CECC2701695600D05B04 /* TYEditPackedGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYEditPackedGroupViewController.h; sourceTree = "<group>"; };
+		7A35CECD2701695600D05B04 /* TYEditPackedGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYEditPackedGroupViewController.m; sourceTree = "<group>"; };
+		7A35CED5270169BA00D05B04 /* TYMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMeTableViewController.m; sourceTree = "<group>"; };
+		7A35CED6270169BA00D05B04 /* TYMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMeTableViewController.h; sourceTree = "<group>"; };
+		7A35CED9270169C000D05B04 /* DualModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DualModelTableViewController.h; sourceTree = "<group>"; };
+		7A35CEDA270169C000D05B04 /* APModeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APModeTableViewController.h; sourceTree = "<group>"; };
+		7A35CEDB270169C000D05B04 /* SIGMeshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGMeshTableViewController.h; sourceTree = "<group>"; };
+		7A35CEDC270169C000D05B04 /* BLEModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEModelViewController.h; sourceTree = "<group>"; };
+		7A35CEDD270169C000D05B04 /* EZModeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZModeTableViewController.h; sourceTree = "<group>"; };
+		7A35CEDE270169C000D05B04 /* APModeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APModeTableViewController.m; sourceTree = "<group>"; };
+		7A35CEDF270169C000D05B04 /* DualModelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DualModelTableViewController.m; sourceTree = "<group>"; };
+		7A35CEE0270169C000D05B04 /* BLEModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEModelViewController.m; sourceTree = "<group>"; };
+		7A35CEE1270169C000D05B04 /* SIGMeshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGMeshTableViewController.m; sourceTree = "<group>"; };
+		7A35CEE2270169C000D05B04 /* EZModeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZModeTableViewController.m; sourceTree = "<group>"; };
+		7A9FC555270175E000D4ACD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DualModel.storyboard; sourceTree = "<group>"; };
+		7A9FC557270175E000D4ACD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EZMode.storyboard; sourceTree = "<group>"; };
+		7A9FC559270175E000D4ACD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SIGMesh.storyboard; sourceTree = "<group>"; };
+		7A9FC55B270175E000D4ACD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
+		7A9FC55D270175E000D4ACD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BLE.storyboard; sourceTree = "<group>"; };
+		7A9FC5782701790800D4ACD6 /* TYAddDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYAddDeviceViewController.h; sourceTree = "<group>"; };
+		7A9FC5792701790800D4ACD6 /* TYAddDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYAddDeviceViewController.m; sourceTree = "<group>"; };
+		7A9FC58A2701BE3A00D4ACD6 /* TYPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPasswordViewController.h; sourceTree = "<group>"; };
+		7A9FC58B2701BE3A00D4ACD6 /* TYAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAuthViewController.m; sourceTree = "<group>"; };
+		7A9FC58C2701BE3A00D4ACD6 /* TYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYLoginViewController.m; sourceTree = "<group>"; };
+		7A9FC58D2701BE3A00D4ACD6 /* TYTicketLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTicketLoginViewController.h; sourceTree = "<group>"; };
+		7A9FC58E2701BE3A00D4ACD6 /* TYWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYWelcomeViewController.h; sourceTree = "<group>"; };
+		7A9FC58F2701BE3A00D4ACD6 /* TYPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPasswordViewController.m; sourceTree = "<group>"; };
+		7A9FC5902701BE3A00D4ACD6 /* TYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYLoginViewController.h; sourceTree = "<group>"; };
+		7A9FC5912701BE3A00D4ACD6 /* TYAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAuthViewController.h; sourceTree = "<group>"; };
+		7A9FC5922701BE3A00D4ACD6 /* TYTicketLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTicketLoginViewController.m; sourceTree = "<group>"; };
+		7A9FC5932701BE3A00D4ACD6 /* TYWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYWelcomeViewController.m; sourceTree = "<group>"; };
+		7A9FC59A2701C53C00D4ACD6 /* CALayer+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Common.h"; sourceTree = "<group>"; };
+		7A9FC59B2701C53C00D4ACD6 /* CALayer+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Common.m"; sourceTree = "<group>"; };
+		7A9FC59D2701C91100D4ACD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/APMode.strings"; sourceTree = "<group>"; };
+		7A9FC59E2701C92900D4ACD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BLE.strings"; sourceTree = "<group>"; };
+		7A9FC59F2701C93600D4ACD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DualModel.strings"; sourceTree = "<group>"; };
+		7A9FC5A02701C93900D4ACD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EZMode.strings"; sourceTree = "<group>"; };
+		7A9FC5A12701C93B00D4ACD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SIGMesh.strings"; sourceTree = "<group>"; };
 		CE0A4F75CDBD5F164503D8B4 /* libPods-TuyaLightingTempDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaLightingTempDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5D7693267394D9002B1D4A /* TYAreaListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYAreaListViewController.h; sourceTree = "<group>"; };
 		DF5D7694267394D9002B1D4A /* TYAreaListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYAreaListViewController.m; sourceTree = "<group>"; };
@@ -75,17 +118,7 @@
 		DF881A61267A1828003C6867 /* TYCreateProjectTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCreateProjectTableViewController.m; sourceTree = "<group>"; };
 		DF881B7B267A2345003C6867 /* TYCreateAreaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCreateAreaTableViewController.h; sourceTree = "<group>"; };
 		DF881B7C267A2345003C6867 /* TYCreateAreaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCreateAreaTableViewController.m; sourceTree = "<group>"; };
-		DFAB7F452680972400743CF4 /* TYCreatePackedGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYCreatePackedGroupViewController.h; path = Group/TYCreatePackedGroupViewController.h; sourceTree = "<group>"; };
-		DFAB7F462680972400743CF4 /* TYCreatePackedGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TYCreatePackedGroupViewController.m; path = Group/TYCreatePackedGroupViewController.m; sourceTree = "<group>"; };
-		DFAB7F492680CD4100743CF4 /* TYEditPackedGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYEditPackedGroupViewController.h; path = Group/TYEditPackedGroupViewController.h; sourceTree = "<group>"; };
-		DFAB7F4A2680CD4100743CF4 /* TYEditPackedGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TYEditPackedGroupViewController.m; path = Group/TYEditPackedGroupViewController.m; sourceTree = "<group>"; };
 		DFAB7F9C26822C2000743CF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DFC486D8268ACB940068483F /* TYTicketLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYTicketLoginViewController.h; sourceTree = "<group>"; };
-		DFC486D9268ACB940068483F /* TYTicketLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYTicketLoginViewController.m; sourceTree = "<group>"; };
-		DFC486DC268ACC6B0068483F /* TYWelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYWelcomeViewController.h; sourceTree = "<group>"; };
-		DFC486DD268ACC6B0068483F /* TYWelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYWelcomeViewController.m; sourceTree = "<group>"; };
-		DFF3C805267B2FFD000D8AE0 /* TYMeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYMeTableViewController.h; path = Me/TYMeTableViewController.h; sourceTree = "<group>"; };
-		DFF3C806267B2FFD000D8AE0 /* TYMeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TYMeTableViewController.m; path = Me/TYMeTableViewController.m; sourceTree = "<group>"; };
 		E1251F6A4F6AEA429294A532 /* Pods-TuyaLightingTempDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaLightingTempDemo.debug.xcconfig"; path = "Target Support Files/Pods-TuyaLightingTempDemo/Pods-TuyaLightingTempDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,10 +166,15 @@
 			children = (
 				27650CE02664E71E00078506 /* Example */,
 				DFAB7F9626822C1900743CF4 /* Main.storyboard */,
+				27650CCE2664E0D500078506 /* LaunchScreen.storyboard */,
+				7A9FC55A270175E000D4ACD6 /* APMode.storyboard */,
+				7A9FC55C270175E000D4ACD6 /* BLE.storyboard */,
+				7A9FC554270175E000D4ACD6 /* DualModel.storyboard */,
+				7A9FC556270175E000D4ACD6 /* EZMode.storyboard */,
+				7A9FC558270175E000D4ACD6 /* SIGMesh.storyboard */,
 				27650CC02664E0D400078506 /* AppDelegate.h */,
 				27650CC12664E0D400078506 /* AppDelegate.m */,
 				27650CCC2664E0D500078506 /* Assets.xcassets */,
-				27650CCE2664E0D500078506 /* LaunchScreen.storyboard */,
 				27650CD12664E0D500078506 /* Info.plist */,
 				27650CD22664E0D500078506 /* main.m */,
 			);
@@ -146,18 +184,15 @@
 		27650CE02664E71E00078506 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				7A9FC5992701C53C00D4ACD6 /* Common */,
+				7A9FC5892701BE3A00D4ACD6 /* Login */,
+				7A35CED8270169C000D05B04 /* DeviceConfiguration */,
+				7A35CED4270169BA00D05B04 /* Me */,
+				7A35CEC92701691E00D05B04 /* PackedGroup */,
 				DF5D76AA26739D0C002B1D4A /* Other */,
-				27650CFF26664AAF00078506 /* Common */,
 				27650CFE26663C3B00078506 /* Project */,
 				27650CE12664E71E00078506 /* Area */,
 				27650CE22664E71E00078506 /* Device */,
-				27650CE32664E71E00078506 /* Login */,
-				DFF3C805267B2FFD000D8AE0 /* TYMeTableViewController.h */,
-				DFF3C806267B2FFD000D8AE0 /* TYMeTableViewController.m */,
-				DFAB7F452680972400743CF4 /* TYCreatePackedGroupViewController.h */,
-				DFAB7F462680972400743CF4 /* TYCreatePackedGroupViewController.m */,
-				DFAB7F492680CD4100743CF4 /* TYEditPackedGroupViewController.h */,
-				DFAB7F4A2680CD4100743CF4 /* TYEditPackedGroupViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -186,23 +221,6 @@
 			path = Device;
 			sourceTree = "<group>";
 		};
-		27650CE32664E71E00078506 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				27650CE426650C5800078506 /* TYLoginViewController.h */,
-				27650CE526650C5800078506 /* TYLoginViewController.m */,
-				DFC486DC268ACC6B0068483F /* TYWelcomeViewController.h */,
-				DFC486DD268ACC6B0068483F /* TYWelcomeViewController.m */,
-				DFC486D8268ACB940068483F /* TYTicketLoginViewController.h */,
-				DFC486D9268ACB940068483F /* TYTicketLoginViewController.m */,
-				27650CED2665E36A00078506 /* TYAuthViewController.h */,
-				27650CEE2665E36A00078506 /* TYAuthViewController.m */,
-				27650CF026661B2400078506 /* TYPasswordViewController.h */,
-				27650CF126661B2400078506 /* TYPasswordViewController.m */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		27650CFE26663C3B00078506 /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,11 +232,65 @@
 			path = Project;
 			sourceTree = "<group>";
 		};
-		27650CFF26664AAF00078506 /* Common */ = {
+		7A35CEC92701691E00D05B04 /* PackedGroup */ = {
 			isa = PBXGroup;
 			children = (
-				27650D03266654F900078506 /* CALayer+Common.h */,
-				27650D04266654F900078506 /* CALayer+Common.m */,
+				7A35CECA2701695500D05B04 /* TYCreatePackedGroupViewController.h */,
+				7A35CECB2701695600D05B04 /* TYCreatePackedGroupViewController.m */,
+				7A35CECC2701695600D05B04 /* TYEditPackedGroupViewController.h */,
+				7A35CECD2701695600D05B04 /* TYEditPackedGroupViewController.m */,
+			);
+			path = PackedGroup;
+			sourceTree = "<group>";
+		};
+		7A35CED4270169BA00D05B04 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				7A35CED5270169BA00D05B04 /* TYMeTableViewController.m */,
+				7A35CED6270169BA00D05B04 /* TYMeTableViewController.h */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		7A35CED8270169C000D05B04 /* DeviceConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				7A35CEDA270169C000D05B04 /* APModeTableViewController.h */,
+				7A35CEDE270169C000D05B04 /* APModeTableViewController.m */,
+				7A35CEDC270169C000D05B04 /* BLEModelViewController.h */,
+				7A35CEE0270169C000D05B04 /* BLEModelViewController.m */,
+				7A35CEDD270169C000D05B04 /* EZModeTableViewController.h */,
+				7A35CEE2270169C000D05B04 /* EZModeTableViewController.m */,
+				7A35CED9270169C000D05B04 /* DualModelTableViewController.h */,
+				7A35CEDF270169C000D05B04 /* DualModelTableViewController.m */,
+				7A35CEDB270169C000D05B04 /* SIGMeshTableViewController.h */,
+				7A35CEE1270169C000D05B04 /* SIGMeshTableViewController.m */,
+			);
+			path = DeviceConfiguration;
+			sourceTree = "<group>";
+		};
+		7A9FC5892701BE3A00D4ACD6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7A9FC58A2701BE3A00D4ACD6 /* TYPasswordViewController.h */,
+				7A9FC58B2701BE3A00D4ACD6 /* TYAuthViewController.m */,
+				7A9FC58C2701BE3A00D4ACD6 /* TYLoginViewController.m */,
+				7A9FC58D2701BE3A00D4ACD6 /* TYTicketLoginViewController.h */,
+				7A9FC58E2701BE3A00D4ACD6 /* TYWelcomeViewController.h */,
+				7A9FC58F2701BE3A00D4ACD6 /* TYPasswordViewController.m */,
+				7A9FC5902701BE3A00D4ACD6 /* TYLoginViewController.h */,
+				7A9FC5912701BE3A00D4ACD6 /* TYAuthViewController.h */,
+				7A9FC5922701BE3A00D4ACD6 /* TYTicketLoginViewController.m */,
+				7A9FC5932701BE3A00D4ACD6 /* TYWelcomeViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7A9FC5992701C53C00D4ACD6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7A9FC59A2701C53C00D4ACD6 /* CALayer+Common.h */,
+				7A9FC59B2701C53C00D4ACD6 /* CALayer+Common.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -230,6 +302,8 @@
 				DF5D76AC26739D67002B1D4A /* TYCacheManager.m */,
 				DF5D7DF92673B6ED002B1D4A /* TuyaSmartPanelModule.h */,
 				DF5D7DFA2673B6ED002B1D4A /* TuyaSmartPanelModule.m */,
+				7A9FC5782701790800D4ACD6 /* TYAddDeviceViewController.h */,
+				7A9FC5792701790800D4ACD6 /* TYAddDeviceViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -251,12 +325,11 @@
 			buildConfigurationList = 27650CD62664E0D500078506 /* Build configuration list for PBXNativeTarget "TuyaLightingTempDemo" */;
 			buildPhases = (
 				C7DAD225E7BA871D937BCFB5 /* [CP] Check Pods Manifest.lock */,
-				6A4B4FF49E64B6EAE952DE8A /* [CP] Prepare Artifacts */,
 				27650CB92664E0D400078506 /* Sources */,
 				27650CBA2664E0D400078506 /* Frameworks */,
 				27650CBB2664E0D400078506 /* Resources */,
-				E80B44338F695C50BE2A280A /* [CP] Embed Pods Frameworks */,
-				B5C9869D09452DA42BF9DBE7 /* [CP] Copy Pods Resources */,
+				CC07334E7B24DF78C4B08575 /* [CP] Embed Pods Frameworks */,
+				5163BA0663C8B23E970B5AF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,7 +346,7 @@
 		27650CB52664E0D400078506 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					27650CBC2664E0D400078506 = {
 						CreatedOnToolsVersion = 12.5;
@@ -304,7 +377,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9FC55E270175E000D4ACD6 /* DualModel.storyboard in Resources */,
+				7A9FC560270175E000D4ACD6 /* SIGMesh.storyboard in Resources */,
+				7A9FC562270175E000D4ACD6 /* BLE.storyboard in Resources */,
+				7A9FC55F270175E000D4ACD6 /* EZMode.storyboard in Resources */,
 				DF6790252682489A005B9A2C /* Localizable.strings in Resources */,
+				7A9FC561270175E000D4ACD6 /* APMode.storyboard in Resources */,
 				27650CD02664E0D500078506 /* LaunchScreen.storyboard in Resources */,
 				27650CCD2664E0D500078506 /* Assets.xcassets in Resources */,
 				DFAB7F9426822C1900743CF4 /* Main.storyboard in Resources */,
@@ -314,24 +392,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6A4B4FF49E64B6EAE952DE8A /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaLightingTempDemo/Pods-TuyaLightingTempDemo-artifacts-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaLightingTempDemo/Pods-TuyaLightingTempDemo-artifacts-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaLightingTempDemo/Pods-TuyaLightingTempDemo-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B5C9869D09452DA42BF9DBE7 /* [CP] Copy Pods Resources */ = {
+		5163BA0663C8B23E970B5AF4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,7 +431,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E80B44338F695C50BE2A280A /* [CP] Embed Pods Frameworks */ = {
+		CC07334E7B24DF78C4B08575 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,26 +455,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9FC5982701BE3A00D4ACD6 /* TYWelcomeViewController.m in Sources */,
 				27650CC22664E0D400078506 /* AppDelegate.m in Sources */,
 				DF5D7DFB2673B6ED002B1D4A /* TuyaSmartPanelModule.m in Sources */,
-				DFAB7F472680972400743CF4 /* TYCreatePackedGroupViewController.m in Sources */,
+				7A35CECF2701695600D05B04 /* TYEditPackedGroupViewController.m in Sources */,
+				7A35CEE3270169C000D05B04 /* APModeTableViewController.m in Sources */,
+				7A9FC5962701BE3A00D4ACD6 /* TYPasswordViewController.m in Sources */,
+				7A9FC59C2701C53C00D4ACD6 /* CALayer+Common.m in Sources */,
 				DF5D76B126739F4A002B1D4A /* TYDeviceListViewController.m in Sources */,
+				7A35CEE7270169C000D05B04 /* EZModeTableViewController.m in Sources */,
 				DF5D76B526739F5D002B1D4A /* TYPackedGroupListViewController.m in Sources */,
+				7A9FC5942701BE3A00D4ACD6 /* TYAuthViewController.m in Sources */,
 				DF5D76B92673A020002B1D4A /* TYSubAreaListViewController.m in Sources */,
+				7A9FC5952701BE3A00D4ACD6 /* TYLoginViewController.m in Sources */,
 				27650CD32664E0D500078506 /* main.m in Sources */,
-				27650D05266654F900078506 /* CALayer+Common.m in Sources */,
-				DFC486DE268ACC6B0068483F /* TYWelcomeViewController.m in Sources */,
-				27650CEF2665E36A00078506 /* TYAuthViewController.m in Sources */,
 				DF881A62267A1828003C6867 /* TYCreateProjectTableViewController.m in Sources */,
-				27650CF226661B2400078506 /* TYPasswordViewController.m in Sources */,
-				DFF3C807267B2FFD000D8AE0 /* TYMeTableViewController.m in Sources */,
+				7A35CEE5270169C000D05B04 /* BLEModelViewController.m in Sources */,
+				7A35CED7270169BB00D05B04 /* TYMeTableViewController.m in Sources */,
+				7A9FC5972701BE3A00D4ACD6 /* TYTicketLoginViewController.m in Sources */,
+				7A35CECE2701695600D05B04 /* TYCreatePackedGroupViewController.m in Sources */,
+				7A35CEE4270169C000D05B04 /* DualModelTableViewController.m in Sources */,
+				7A9FC57A2701790800D4ACD6 /* TYAddDeviceViewController.m in Sources */,
 				DF5D7695267394D9002B1D4A /* TYAreaListViewController.m in Sources */,
 				DF5D76AD26739D67002B1D4A /* TYCacheManager.m in Sources */,
-				27650CE626650C5800078506 /* TYLoginViewController.m in Sources */,
+				7A35CEE6270169C000D05B04 /* SIGMeshTableViewController.m in Sources */,
 				DF881B7D267A2345003C6867 /* TYCreateAreaTableViewController.m in Sources */,
 				27650CFD26663C3300078506 /* TYProjectViewController.m in Sources */,
-				DFC486DA268ACB940068483F /* TYTicketLoginViewController.m in Sources */,
-				DFAB7F4B2680CD4100743CF4 /* TYEditPackedGroupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +494,51 @@
 				DF6790162682479A005B9A2C /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7A9FC554270175E000D4ACD6 /* DualModel.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A9FC555270175E000D4ACD6 /* Base */,
+				7A9FC59F2701C93600D4ACD6 /* zh-Hans */,
+			);
+			name = DualModel.storyboard;
+			sourceTree = "<group>";
+		};
+		7A9FC556270175E000D4ACD6 /* EZMode.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A9FC557270175E000D4ACD6 /* Base */,
+				7A9FC5A02701C93900D4ACD6 /* zh-Hans */,
+			);
+			name = EZMode.storyboard;
+			sourceTree = "<group>";
+		};
+		7A9FC558270175E000D4ACD6 /* SIGMesh.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A9FC559270175E000D4ACD6 /* Base */,
+				7A9FC5A12701C93B00D4ACD6 /* zh-Hans */,
+			);
+			name = SIGMesh.storyboard;
+			sourceTree = "<group>";
+		};
+		7A9FC55A270175E000D4ACD6 /* APMode.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A9FC55B270175E000D4ACD6 /* Base */,
+				7A9FC59D2701C91100D4ACD6 /* zh-Hans */,
+			);
+			name = APMode.storyboard;
+			sourceTree = "<group>";
+		};
+		7A9FC55C270175E000D4ACD6 /* BLE.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A9FC55D270175E000D4ACD6 /* Base */,
+				7A9FC59E2701C92900D4ACD6 /* zh-Hans */,
+			);
+			name = BLE.storyboard;
 			sourceTree = "<group>";
 		};
 		DF6790272682489A005B9A2C /* Localizable.strings */ = {
@@ -503,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -557,7 +669,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -24,8 +24,9 @@ NSString *const TY_SECRET_KEY = @"";
     // Please add security image
     [[TuyaSmartSDK sharedInstance] startWithAppKey:TY_APP_KEY secretKey:TY_SECRET_KEY];
     
-    TuyaSmartSDK.sharedInstance.env = TYEnvPrepare;
-    TuyaSmartSDK.sharedInstance.debugMode = YES;
+    // Please turn on debug mode if necessary
+//    TuyaSmartSDK.sharedInstance.env = TYEnvPrepare;
+//    TuyaSmartSDK.sharedInstance.debugMode = YES;
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     

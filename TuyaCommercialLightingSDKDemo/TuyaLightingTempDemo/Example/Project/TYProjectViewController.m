@@ -19,6 +19,7 @@
 @property(nonatomic, strong) IBOutlet UITableView *tableView;
 @property(nonatomic, strong) NSArray<TuyaLightingProjectModel *> *dataArray;
 @property(nonatomic, assign) NSInteger seleceIndex;
+@property(nonatomic, strong) TuyaLightingProject *project;
 
 
 @end
@@ -41,7 +42,17 @@
         
         if (TYCacheManager.sharedInstance.projectId == 0) {
             self.seleceIndex = 0;
-            TYCacheManager.sharedInstance.projectId = self.dataArray.firstObject.projectId;
+            
+            long long projectId = self.dataArray.firstObject.projectId;
+            TYCacheManager.sharedInstance.projectId = projectId;
+            // ❗️Obtaining project details is required
+            [SVProgressHUD show];
+            self.project = [TuyaLightingProject projectWithProjectId:projectId];
+            [self.project getProjectDetailWithSuccess:^{
+                [SVProgressHUD dismiss];
+            } failure:^(NSError * _Nonnull error) {
+                [SVProgressHUD dismiss];
+            }];
         }
         
         [self.tableView reloadData];
@@ -75,10 +86,18 @@
     self.seleceIndex = indexPath.row;
     [self.tableView reloadData];
     
-    TYCacheManager.sharedInstance.projectId = self.dataArray[indexPath.row].projectId;
+    long long projectId = self.dataArray[indexPath.row].projectId;
     
-    TYAreaListViewController *vc = (TYAreaListViewController *)((UINavigationController *)self.tabBarController.viewControllers[1]).topViewController;
-    [vc loadData];
+    TYCacheManager.sharedInstance.projectId = projectId;
+    
+    // ❗️Obtaining project details is required
+    [SVProgressHUD show];
+    self.project = [TuyaLightingProject projectWithProjectId:projectId];
+    [self.project getProjectDetailWithSuccess:^{
+        [SVProgressHUD dismiss];
+    } failure:^(NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 
 @end

@@ -39,7 +39,7 @@
 "XRn-f3-WUn.placeholder" = "Owner phone";
 
 /* Class = "UITabBarItem"; title = "登录/注册"; ObjectID = "XcZ-iW-s6t"; */
-"XcZ-iW-s6t.title" = "登录/注册";
+"XcZ-iW-s6t.title" = "Log in / Register";
 
 /* Class = "UIButton"; normalTitle = "提交"; ObjectID = "Y1y-TF-PGv"; */
 "Y1y-TF-PGv.normalTitle" = "Submit";
@@ -75,7 +75,7 @@
 "iHX-HN-1wD.placeholder" = "Area name";
 
 /* Class = "UINavigationItem"; title = "一级区域列表"; ObjectID = "iRG-dI-J2G"; */
-"iRG-dI-J2G.title" = "一级区域列表";
+"iRG-dI-J2G.title" = "First level area";
 
 /* Class = "UITabBarItem"; title = "我的"; ObjectID = "jVP-Be-bJ7"; */
 "jVP-Be-bJ7.title" = "Me";
@@ -101,3 +101,5 @@
 "XFj-5d-gIk" = "Other login";
 
 "qMp-D7-xVJ.title" = "Create packed group";
+
+"XxG-MN-wag.normalTitle" = "Add device";

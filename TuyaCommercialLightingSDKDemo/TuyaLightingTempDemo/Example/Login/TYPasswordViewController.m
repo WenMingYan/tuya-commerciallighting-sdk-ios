@@ -78,9 +78,9 @@
 #pragma mark - actions
 - (void)nextSender {
         
-    TYLoginViewController *login = (TYLoginViewController *)self.navigationController.viewControllers.firstObject;
-    [login resetWithAccount:self.account password:self.passwordField.text];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+//    TYLoginViewController *login = (TYLoginViewController *)self.navigationController.viewControllers.firstObject;
+//    [login resetWithAccount:self.account password:self.passwordField.text];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 

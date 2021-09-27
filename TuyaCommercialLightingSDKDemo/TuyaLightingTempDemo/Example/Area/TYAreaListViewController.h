@@ -11,7 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TYAreaListViewController : UIViewController
 
-- (void)loadData;
 
 @end
 

@@ -31,11 +31,13 @@
     [SVProgressHUD show];
     [area getDeviceListWithOffsetKey:@"1"
                                  tag:@""
-                             success:^(NSArray<TuyaSmartDeviceModel *> * _Nonnull devices, NSString * _Nonnull nextOffsetKey, BOOL end) {
+                             success:^(NSArray<TuyaSmartDeviceModel *> * _Nonnull devices, NSString * _Nonnull nextOffsetKey, BOOL end, NSUInteger total) {
         [SVProgressHUD dismiss];
         self.dataArray = devices;
         [self.tableView reloadData];
-    } failure:NULL];
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:error.localizedFailureReason];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

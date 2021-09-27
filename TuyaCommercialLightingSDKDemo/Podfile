@@ -5,14 +5,36 @@ platform :ios, '10.0'
 
 target 'TuyaLightingTempDemo' do
   
-  pod 'TuyaSmartCommercialLightingSdk', '1.9.6'
+  pod 'TuyaSmartCommercialLightingSdk', '1.11.0'
   pod 'TuyaSmartUserToBKit', '3.26.6'
+  
+  
+#  pod 'TuyaSmartActivatorCoreKit', '3.28.5'
+#  pod 'TuyaSmartActivatorKit', '3.26.6'
+#  pod 'TuyaSmartBLEKit', '3.29.5'
+#  pod 'TuyaSmartBLEMeshKit', '3.29.5'
+#  pod 'TuyaSmartBaseKit', '3.29.0'
+#  pod 'TuyaSmartDeviceCoreKit', '3.29.6'
+#
+#  pod 'TuyaSmartMQTTChannelKit', '3.29.0'
+#  pod 'TuyaSmartNetworkKit', '3.29.0'
+#  pod 'TuyaSmartQUIC', '1.1.2'
+#  pod 'TuyaSmartSocketChannelKit', '3.27.1'
+#  pod 'TuyaSmartUtil', '3.26.6'
   
   pod 'Masonry'
   pod 'SDWebImage'
   pod 'SVProgressHUD'
+  pod 'libextobjc'
   
-  
-  
+  # 如果使用模拟器遇到找不到头文件的情况，请添加以下配置
+  # If you use the simulator to find the header file is not found, please add the following configuration
+  post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
+              config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+          end
+      end
+  end
   
 end

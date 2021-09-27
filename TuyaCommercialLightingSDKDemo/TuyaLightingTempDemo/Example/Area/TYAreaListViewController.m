@@ -9,6 +9,7 @@
 #import <Masonry/Masonry.h>
 #import <TuyaSmartCommercialLightingSdk/TuyaSmartCommercialLightingSdk.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <libextobjc/EXTScope.h>
 
 #import "TYCacheManager.h"
 #import "TYSubAreaListViewController.h"
@@ -30,8 +31,14 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
     [self loadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (self.project.model.projectId != TYCacheManager.sharedInstance.projectId) {
+        [self loadData];
+    }
 }
 
 - (void)loadData {
@@ -49,16 +56,18 @@
     
     self.project = [[TuyaLightingProject alloc] initWithProjectId:projectId];
     self.project.delegate = self;
+    
+    @weakify(self);
     [self.project getAreaListWithSuccess:^(NSArray<TuyaLightingAreaModel *> * _Nonnull areas) {
+        @strongify(self);
         [SVProgressHUD dismiss];
         self.dataArray = areas;
         [self.tableView reloadData];
-    } failure:NULL];
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:error.description];
+    }];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
@@ -66,8 +75,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = self.dataArray[indexPath.row].name;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    TuyaLightingAreaModel *areaModel = self.dataArray[indexPath.row];
+    cell.textLabel.text = areaModel.name;
+    cell.accessoryType = areaModel.roomSource == TuyaLightingAreaTypeUnZoned ? UITableViewCellAccessoryNone : UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
 }
 
@@ -101,29 +111,37 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     // ⚠️ nextLevelAreaCount is NSNumber
     
-    if (self.dataArray[indexPath.row].nextLevelAreaCount.integerValue) {
+    TuyaLightingAreaModel *areaModel = self.dataArray[indexPath.row];
+    
+    if (areaModel.nextLevelAreaCount.integerValue) {
         TYSubAreaListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TYSubAreaListViewController"];
-        vc.areaId = self.dataArray[indexPath.row].areaId;
+        vc.areaId = areaModel.areaId;
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     } else {
-        UITabBarController *tabbarVc = [self.storyboard instantiateViewControllerWithIdentifier:@"OtherTabbarController"];
         
-        
-        [tabbarVc.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (areaModel.roomSource == TuyaLightingAreaTypeUnZoned) {
+            TYDeviceListViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TYDeviceListViewController"];
+            viewController.areaId = self.dataArray[indexPath.row].areaId;
+            viewController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:viewController animated:YES];
+        } else {
+            UITabBarController *tabbarVc = [self.storyboard instantiateViewControllerWithIdentifier:@"OtherTabbarController"];
+            [tabbarVc.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                
+                if ([obj isKindOfClass:TYDeviceListViewController.class]) {
+                    ((TYDeviceListViewController *)obj).areaId = areaModel.areaId;
+                } else {
+                    ((TYPackedGroupListViewController *)obj).areaId = areaModel.areaId;
+                }
+            }];
             
-            if ([obj isKindOfClass:TYDeviceListViewController.class]) {
-                ((TYDeviceListViewController *)obj).areaId = self.dataArray[indexPath.row].areaId;
-            } else {
-                ((TYPackedGroupListViewController *)obj).areaId = self.dataArray[indexPath.row].areaId;
-            }
-        }];
-        
-        tabbarVc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:tabbarVc animated:YES];
+            tabbarVc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:tabbarVc animated:YES];
+        }
     }
 }
 

@@ -45,17 +45,18 @@
 - (void)loadData {
     long long projectId = TYCacheManager.sharedInstance.projectId;
     [SVProgressHUD show];
+   
     [TuyaSmartPackedGroupManager getPackedGroupListWithProjectId:projectId
                                                           areaId:self.areaId
                                                            limit:20
                                                        offsetKey:@""
-                                                         success:^(NSArray<TuyaSmartPackedGroupModel *> * _Nonnull groups, NSString * _Nonnull nextOffsetKey, BOOL end) {
+                                                         success:^(NSArray<TuyaSmartPackedGroupModel *> * _Nonnull groups, NSString * _Nonnull nextOffsetKey, NSInteger total, BOOL end) {
         [SVProgressHUD dismiss];
         
         self.dataArray = groups;
         [self.tableView reloadData];
     } failure:^(NSError *error) {
-        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:error.localizedFailureReason];
     }];
 }
 

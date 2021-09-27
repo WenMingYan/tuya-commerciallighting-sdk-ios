@@ -103,19 +103,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (self.dataArray[indexPath.row].nextLevelAreaCount.integerValue) {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TuyaLightingAreaModel *areaModel = self.dataArray[indexPath.row];
+    if (areaModel.nextLevelAreaCount.integerValue) {
         TYSubAreaListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"TYSubAreaListViewController"];
-        vc.areaId = self.dataArray[indexPath.row].areaId;
+        vc.areaId = areaModel.areaId;
         [self.navigationController pushViewController:vc animated:YES];
     } else {
         UITabBarController *tabbarVc = [self.storyboard instantiateViewControllerWithIdentifier:@"OtherTabbarController"];
         [tabbarVc.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
             if ([obj isKindOfClass:TYDeviceListViewController.class]) {
-                ((TYDeviceListViewController *)obj).areaId = self.dataArray[indexPath.row].areaId;
+                ((TYDeviceListViewController *)obj).areaId = areaModel.areaId;
             } else {
-                ((TYPackedGroupListViewController *)obj).areaId = self.dataArray[indexPath.row].areaId;
+                ((TYPackedGroupListViewController *)obj).areaId = areaModel.areaId;
             }
         }];
         
