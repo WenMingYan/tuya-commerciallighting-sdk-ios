@@ -29,12 +29,12 @@ target 'TuyaLightingTempDemo' do
   
   # 如果使用模拟器遇到找不到头文件的情况，请添加以下配置
   # If you use the simulator to find the header file is not found, please add the following configuration
-  post_install do |installer|
-      installer.pods_project.targets.each do |target|
-          target.build_configurations.each do |config|
-              config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-          end
-      end
-  end
+#  post_install do |installer|
+#      installer.pods_project.targets.each do |target|
+#          target.build_configurations.each do |config|
+#              config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+#          end
+#      end
+#  end
   
 end
