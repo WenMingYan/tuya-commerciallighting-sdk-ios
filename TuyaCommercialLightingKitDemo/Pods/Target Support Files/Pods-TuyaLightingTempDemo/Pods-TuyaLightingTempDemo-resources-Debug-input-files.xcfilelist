@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-TuyaLightingTempDemo/Pods-TuyaLightingTempDemo-resources.sh
+${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle
+${PODS_ROOT}/TuyaSmartNetworkKit/ios/TuyaSmartNetworkKit.framework/Versions/A/Resources/cerficate_v2
+${PODS_ROOT}/TuyaSmartUtil/Carthage/Build/iOS/TuyaSmartUtil.framework/TuyaSmartUtil.bundle

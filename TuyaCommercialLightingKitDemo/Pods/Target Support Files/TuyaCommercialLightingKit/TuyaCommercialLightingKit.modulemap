@@ -1,0 +1,6 @@
+module TuyaCommercialLightingKit {
+  umbrella header "TuyaCommercialLightingKit.h"
+
+  export *
+  module * { export * }
+}
