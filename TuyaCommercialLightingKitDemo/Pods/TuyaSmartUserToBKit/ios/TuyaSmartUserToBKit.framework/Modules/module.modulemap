@@ -1,6 +1,0 @@
-framework module TuyaSmartUserToBKit {
-  umbrella header "TuyaSmartUserToBKit.h"
-
-  export *
-  module * { export * }
-}
