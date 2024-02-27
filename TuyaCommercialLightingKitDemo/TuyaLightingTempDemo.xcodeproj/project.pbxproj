@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,7 +38,6 @@
 		DF5D76B126739F4A002B1D4A /* TYDeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5D76B026739F4A002B1D4A /* TYDeviceListViewController.m */; };
 		DF5D76B526739F5D002B1D4A /* TYPackedGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5D76B426739F5D002B1D4A /* TYPackedGroupListViewController.m */; };
 		DF5D76B92673A020002B1D4A /* TYSubAreaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5D76B82673A020002B1D4A /* TYSubAreaListViewController.m */; };
-		DF5D7DFB2673B6ED002B1D4A /* TuyaSmartPanelModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5D7DFA2673B6ED002B1D4A /* TuyaSmartPanelModule.m */; };
 		DF6790252682489A005B9A2C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF6790272682489A005B9A2C /* Localizable.strings */; };
 		DF881A62267A1828003C6867 /* TYCreateProjectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF881A61267A1828003C6867 /* TYCreateProjectTableViewController.m */; };
 		DF881B7D267A2345003C6867 /* TYCreateAreaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF881B7C267A2345003C6867 /* TYCreateAreaTableViewController.m */; };
@@ -107,8 +106,6 @@
 		DF5D76B426739F5D002B1D4A /* TYPackedGroupListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPackedGroupListViewController.m; sourceTree = "<group>"; };
 		DF5D76B72673A020002B1D4A /* TYSubAreaListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYSubAreaListViewController.h; sourceTree = "<group>"; };
 		DF5D76B82673A020002B1D4A /* TYSubAreaListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYSubAreaListViewController.m; sourceTree = "<group>"; };
-		DF5D7DF92673B6ED002B1D4A /* TuyaSmartPanelModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuyaSmartPanelModule.h; sourceTree = "<group>"; };
-		DF5D7DFA2673B6ED002B1D4A /* TuyaSmartPanelModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuyaSmartPanelModule.m; sourceTree = "<group>"; };
 		DF6790162682479A005B9A2C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		DF6790262682489A005B9A2C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DF6790292682489C005B9A2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -300,8 +297,6 @@
 			children = (
 				DF5D76AB26739D67002B1D4A /* TYCacheManager.h */,
 				DF5D76AC26739D67002B1D4A /* TYCacheManager.m */,
-				DF5D7DF92673B6ED002B1D4A /* TuyaSmartPanelModule.h */,
-				DF5D7DFA2673B6ED002B1D4A /* TuyaSmartPanelModule.m */,
 				7A9FC5782701790800D4ACD6 /* TYAddDeviceViewController.h */,
 				7A9FC5792701790800D4ACD6 /* TYAddDeviceViewController.m */,
 			);
@@ -457,7 +452,6 @@
 			files = (
 				7A9FC5982701BE3A00D4ACD6 /* TYWelcomeViewController.m in Sources */,
 				27650CC22664E0D400078506 /* AppDelegate.m in Sources */,
-				DF5D7DFB2673B6ED002B1D4A /* TuyaSmartPanelModule.m in Sources */,
 				7A35CECF2701695600D05B04 /* TYEditPackedGroupViewController.m in Sources */,
 				7A35CEE3270169C000D05B04 /* APModeTableViewController.m in Sources */,
 				7A9FC5962701BE3A00D4ACD6 /* TYPasswordViewController.m in Sources */,
@@ -691,7 +685,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-ld_classic",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lighting.smart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -711,7 +711,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-ld_classic",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lighting.smart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

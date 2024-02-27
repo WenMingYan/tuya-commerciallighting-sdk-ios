@@ -1,5 +1,6 @@
 
 source 'https://cdn.cocoapods.org/'
+source "https://github.com/TuyaInc/TuyaPublicSpecs.git"
 
 platform :ios, '10.0'
 
@@ -26,6 +27,16 @@ target 'TuyaLightingTempDemo' do
   pod 'SDWebImage'
   pod 'SVProgressHUD'
   pod 'libextobjc'
+  
+  pod 'TYBLEInterfaceImpl', '0.3.0-lampbizbundle-1.11.5.1.3'
+  pod 'TYBLEMeshInterfaceImpl', ' 0.0.9-lampbizbundle-1.11.5.1.3'
+  pod 'TuyaSmartBLEKit'
+  pod 'TuyaSmartBLEMeshKit'
+  pod 'TYBLELampManager', '1.12.0'
+  
+  pod 'MMKV', '1.0.18'
+  pod 'TuyaCommercialLightingActivatorBizBundle', '~> 1.11.5.1'
+  pod 'TuyaCommercialLightingPanelBizBundle', '~> 1.11.5.1'
   
   # 如果使用模拟器遇到找不到头文件的情况，请添加以下配置
   # If you use the simulator to find the header file is not found, please add the following configuration

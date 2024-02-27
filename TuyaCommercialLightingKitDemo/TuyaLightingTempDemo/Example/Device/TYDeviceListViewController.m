@@ -8,8 +8,8 @@
 #import "TYDeviceListViewController.h"
 #import <TuyaCommercialLightingKit/TuyaCommercialLightingKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
-//#import <TuyaSmartBizCore/TuyaSmartBizCore.h>
-//#import <TYModuleServices/TYPanelProtocol.h>
+#import <TuyaSmartBizCore/TuyaSmartBizCore.h>
+#import <TYModuleServices/TYPanelProtocol.h>
 
 #import "TYCacheManager.h"
 
@@ -51,7 +51,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    TuyaSmartDeviceModel *deviceModel = self.dataArray[indexPath.row];
+    id<TYPanelProtocol> impl = [[TuyaSmartBizCore sharedInstance] serviceOfProtocol:@protocol(TYPanelProtocol)];
+    // 获取面板视图控制器，自行跳转
+    if (deviceModel) {
+        [impl gotoPanelViewControllerWithDevice:deviceModel
+                                          group:nil
+                                   initialProps:@{}
+                                   contextProps:@{}
+                                     completion:^(NSError * _Nullable error) {
+            
+        }];
+    }
 }
 
 @end
