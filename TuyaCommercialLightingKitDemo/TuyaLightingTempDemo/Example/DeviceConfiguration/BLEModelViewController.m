@@ -5,12 +5,12 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 #import "BLEModelViewController.h"
-#import <TuyaSmartBLEKit/TuyaSmartBLEKit.h>
+#import <ThingSmartBLEKit/ThingSmartBLEKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
-#import "TYCacheManager.h"
+#import "CacheManager.h"
 
-@interface BLEModelViewController ()<TuyaSmartBLEManagerDelegate>
+@interface BLEModelViewController ()<ThingSmartBLEManagerDelegate>
 
 @property (nonatomic, assign) BOOL isSuccess;
 
@@ -29,32 +29,32 @@
 }
 
 - (void)stopScan{
-    TuyaSmartBLEManager.sharedInstance.delegate = nil;
-    [TuyaSmartBLEManager.sharedInstance stopListening:YES];
+    ThingSmartBLEManager.sharedInstance.delegate = nil;
+    [ThingSmartBLEManager.sharedInstance stopListening:YES];
     if (!self.isSuccess) {
         [SVProgressHUD dismiss];
     }
 }
 
 - (IBAction)searchClicked:(id)sender {
-    TuyaSmartBLEManager.sharedInstance.delegate = self;
-    [TuyaSmartBLEManager.sharedInstance startListening:YES];
+    ThingSmartBLEManager.sharedInstance.delegate = self;
+    [ThingSmartBLEManager.sharedInstance startListening:YES];
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Searching", @"")];
 }
 
-#pragma mark - TuyaSmartBLEManagerDelegate
+#pragma mark - ThingSmartBLEManagerDelegate
 
-- (void)didDiscoveryDeviceWithDeviceInfo:(TYBLEAdvModel *)deviceInfo{
-    long long projectId = TYCacheManager.sharedInstance.projectId;
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"Configuring", @"")];
-    [TuyaSmartBLEManager.sharedInstance activeBLE:deviceInfo homeId:projectId success:^(TuyaSmartDeviceModel * _Nonnull deviceModel) {
-        self.isSuccess = YES;
-        NSString *name = deviceModel.name?deviceModel.name:NSLocalizedString(@"Unknown Name", @"Unknown name device.");
-        [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@ %@" ,NSLocalizedString(@"Successfully Added", @"") ,name]];
-        [self.navigationController popViewControllerAnimated:YES];
-    } failure:^{
-        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Failed to configuration", "")];
-    }];
-}
+//- (void)didDiscoveryDeviceWithDeviceInfo:(TYBLEAdvModel *)deviceInfo{
+//    long long projectId = TYCacheManager.sharedInstance.projectId;
+//    [SVProgressHUD showWithStatus:NSLocalizedString(@"Configuring", @"")];
+//    [ThingSmartBLEManager.sharedInstance activeBLE:deviceInfo homeId:projectId success:^(ThingSmartDeviceModel * _Nonnull deviceModel) {
+//        self.isSuccess = YES;
+//        NSString *name = deviceModel.name?deviceModel.name:NSLocalizedString(@"Unknown Name", @"Unknown name device.");
+//        [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@ %@" ,NSLocalizedString(@"Successfully Added", @"") ,name]];
+//        [self.navigationController popViewControllerAnimated:YES];
+//    } failure:^{
+//        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Failed to configuration", "")];
+//    }];
+//}
 
 @end

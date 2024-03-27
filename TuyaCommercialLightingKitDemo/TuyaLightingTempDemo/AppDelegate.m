@@ -6,8 +6,10 @@
 //
 
 #import "AppDelegate.h"
-#import <TuyaSmartBaseKit/TuyaSmartBaseKit.h>
-
+#import <ThingSmartBaseKit/ThingSmartBaseKit.h>
+#import <ThingSmartBizCore/ThingSmartBizCore.h>
+#import <ThingModuleServices/ThingModuleServices.h>
+#import "LampProjectDataProtocolImpl.h"
 
 NSString *const TY_APP_KEY = @"";
 NSString *const TY_SECRET_KEY = @"";
@@ -21,21 +23,20 @@ NSString *const TY_SECRET_KEY = @"";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // Please add security image
-    [[TuyaSmartSDK sharedInstance] startWithAppKey:TY_APP_KEY secretKey:TY_SECRET_KEY];
-    
-    // Please turn on debug mode if necessary
-//    TuyaSmartSDK.sharedInstance.env = TYEnvPrepare;
-//    TuyaSmartSDK.sharedInstance.debugMode = YES;
+    [ThingSmartSDK.sharedInstance startWithAppKey:TY_APP_KEY secretKey:TY_SECRET_KEY];
+    ThingSmartSDK.sharedInstance.debugMode = YES;
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle];
-    if (TuyaSmartUser.sharedInstance.isLogin) {
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"UITabBarController"];
+    if (ThingSmartUser.sharedInstance.isLogin) {
+        self.window.rootViewController = [UIStoryboard storyboardWithName:@"Main" bundle:NSBundle.mainBundle].instantiateInitialViewController;
     } else {
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginNav"];
+        self.window.rootViewController = [UIStoryboard storyboardWithName:@"Login" bundle:NSBundle.mainBundle].instantiateInitialViewController;
     }
+    
+    //Register
+    [[ThingSmartBizCore sharedInstance] registerService:@protocol(ThingLampProjectDataProtocol)
+                                              withClass:LampProjectDataProtocolImpl.class];
     return YES;
 }
 
