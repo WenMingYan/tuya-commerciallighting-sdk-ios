@@ -5,13 +5,15 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 #import "APModeTableViewController.h"
-#import <TuyaSmartActivatorCoreKit/TuyaSmartActivatorCoreKit.h>
-#import <TuyaCommercialLightingKit/TuyaCommercialLightingKit.h>
+#import <ThingSmartActivatorCoreKit/ThingSmartActivatorCoreKit.h>
+#import <ThingCommercialLightingKit/ThingCommercialLightingKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+//#import <ThingSmartBizCore/ThingSmartBizCore.h>
+//#import <TYModuleServices/TYModuleServices.h>
 
-#import "TYCacheManager.h"
+#import "CacheManager.h"
 
-@interface APModeTableViewController () <TuyaSmartActivatorDelegate>
+@interface APModeTableViewController () <ThingSmartActivatorDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *ssidTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
@@ -32,39 +34,57 @@
 }
 
 - (IBAction)searchTapped:(UIBarButtonItem *)sender {
-    [self startConfiguration];
+//    [self startConfiguration];
+//    id<TYActivatorProtocol> impl = [[ThingSmartBizCore sharedInstance] serviceOfProtocol:@protocol(TYActivatorProtocol)];
+//    [impl gotoCategoryViewController];
+//      
+//    // 获取配网结果
+//    [impl activatorCompletion:TYActivatorCompletionNodeNormal customJump:NO completionBlock:^(NSArray * _Nullable deviceList) {
+//        NSLog(@"deviceList: %@",deviceList);
+//    }];
 }
 
+- (void)addDeviceAction {
+//    id<TYActivatorProtocol> impl = [[ThingSmartBizCore sharedInstance] serviceOfProtocol:@protocol(TYActivatorProtocol)];
+//    [impl gotoCategoryViewController];
+//
+//    // 获取配网结果
+//    [impl activatorCompletion:TYActivatorCompletionNodeNormal customJump:NO completionBlock:^(NSArray * _Nullable deviceList) {
+//        NSLog(@"deviceList: %@",deviceList);
+//    }];
+}
+
+
 - (void)requestToken {
-    long long projectId = TYCacheManager.sharedInstance.projectId;
+    long long projectId = CacheManager.sharedInstance.projectId;
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Requesting for Token", @"")];
-    [[TuyaSmartActivator sharedInstance] getTokenWithProjectId:projectId success:^(NSString *result) {
-        if (result && result.length > 0) {
-            self.token = result;
-        }
-        [SVProgressHUD dismiss];
-    } failure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:error.localizedDescription];
-    }];
+//    [[ThingSmartActivator sharedInstance] getTokenWithProjectId:projectId success:^(NSString *result) {
+//        if (result && result.length > 0) {
+//            self.token = result;
+//        }
+//        [SVProgressHUD dismiss];
+//    } failure:^(NSError *error) {
+//        [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+//    }];
 }
 
 - (void)startConfiguration {
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Configuring", @"")];
     NSString *ssid = self.ssidTextField.text;
     NSString *password = self.passwordTextField.text;
-    [TuyaSmartActivator sharedInstance].delegate = self;
-    [[TuyaSmartActivator sharedInstance] startConfigWiFi:TYActivatorModeAP ssid:ssid password:password token:self.token timeout:100];
+    [ThingSmartActivator sharedInstance].delegate = self;
+//    [[ThingSmartActivator sharedInstance] startConfigWiFi:TYActivatorModeAP ssid:ssid password:password token:self.token timeout:100];
 }
 
 - (void)stopConfigWifi {
     if (!self.isSuccess) {
         [SVProgressHUD dismiss];
     }
-    [TuyaSmartActivator sharedInstance].delegate = nil;
-    [[TuyaSmartActivator sharedInstance] stopConfigWiFi];
+    [ThingSmartActivator sharedInstance].delegate = nil;
+    [[ThingSmartActivator sharedInstance] stopConfigWiFi];
 }
 
-- (void)activator:(TuyaSmartActivator *)activator didReceiveDevice:(TuyaSmartDeviceModel *)deviceModel error:(NSError *)error {
+- (void)activator:(ThingSmartActivator *)activator didReceiveDevice:(ThingSmartDeviceModel *)deviceModel error:(NSError *)error {
     if (deviceModel && error == nil) {
         NSString *name = deviceModel.name?deviceModel.name:NSLocalizedString(@"Unknown Name", @"Unknown name device.");
         [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@ %@" ,NSLocalizedString(@"Successfully Added", @"") ,name]];

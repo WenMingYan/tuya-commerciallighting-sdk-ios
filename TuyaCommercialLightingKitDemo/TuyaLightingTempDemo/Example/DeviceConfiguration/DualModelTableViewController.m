@@ -5,13 +5,13 @@
 //  Copyright (c) 2014-2021 Tuya Inc. (https://developer.tuya.com/)
 
 #import "DualModelTableViewController.h"
-#import <TuyaSmartBLEKit/TuyaSmartBLEKit.h>
+#import <ThingSmartBLEKit/ThingSmartBLEKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
-#import <TuyaCommercialLightingKit/TuyaCommercialLightingKit.h>
+#import <ThingCommercialLightingKit/ThingCommercialLightingKit.h>
 
-#import "TYCacheManager.h"
+#import "CacheManager.h"
 
-@interface DualModelTableViewController ()<TuyaSmartBLEManagerDelegate, TuyaSmartBLEWifiActivatorDelegate>
+@interface DualModelTableViewController ()<ThingSmartBLEManagerDelegate, ThingSmartBLEWifiActivatorDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtFSSID;
 @property (weak, nonatomic) IBOutlet UITextField *txtFPS;
@@ -36,40 +36,40 @@
         [SVProgressHUD dismiss];
     }
     
-    TuyaSmartBLEManager.sharedInstance.delegate = nil;
-    [TuyaSmartBLEManager.sharedInstance stopListening:YES];
+    ThingSmartBLEManager.sharedInstance.delegate = nil;
+    [ThingSmartBLEManager.sharedInstance stopListening:YES];
 
-    TuyaSmartBLEWifiActivator.sharedInstance.bleWifiDelegate = nil;
-    [TuyaSmartBLEWifiActivator.sharedInstance stopDiscover];
+    ThingSmartBLEWifiActivator.sharedInstance.bleWifiDelegate = nil;
+    [ThingSmartBLEWifiActivator.sharedInstance stopDiscover];
 }
 
 - (IBAction)searchClicked:(id)sender {
-    TuyaSmartBLEManager.sharedInstance.delegate = self;
-    [TuyaSmartBLEManager.sharedInstance startListening:YES];
+    ThingSmartBLEManager.sharedInstance.delegate = self;
+    [ThingSmartBLEManager.sharedInstance startListening:YES];
     [SVProgressHUD showWithStatus:NSLocalizedString(@"Searching", @"")];
 }
 
-- (void)didDiscoveryDeviceWithDeviceInfo:(TYBLEAdvModel *)deviceInfo{
-    long long projectId = TYCacheManager.sharedInstance.projectId;
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"Sending Data to the Device", @"")];
-    TuyaSmartBLEWifiActivator.sharedInstance.bleWifiDelegate = self;
-    [TuyaSmartBLEWifiActivator.sharedInstance startConfigBLEWifiDeviceWithUUID:deviceInfo.uuid homeId:projectId productId:deviceInfo.productId ssid:_txtFSSID.text ?: @"" password:_txtFPS.text ?: @"" timeout:100 success:^{
-        [SVProgressHUD showWithStatus:NSLocalizedString(@"Configuring", @"")];
-    } failure:^{
-        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Failed to configuration", "")];
-    }];
-}
+//- (void)didDiscoveryDeviceWithDeviceInfo:(TYBLEAdvModel *)deviceInfo{
+//    long long projectId = TYCacheManager.sharedInstance.projectId;
+//    [SVProgressHUD showWithStatus:NSLocalizedString(@"Sending Data to the Device", @"")];
+//    ThingSmartBLEWifiActivator.sharedInstance.bleWifiDelegate = self;
+//    [ThingSmartBLEWifiActivator.sharedInstance startConfigBLEWifiDeviceWithUUID:deviceInfo.uuid homeId:projectId productId:deviceInfo.productId ssid:_txtFSSID.text ?: @"" password:_txtFPS.text ?: @"" timeout:100 success:^{
+//        [SVProgressHUD showWithStatus:NSLocalizedString(@"Configuring", @"")];
+//    } failure:^{
+//        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Failed to configuration", "")];
+//    }];
+//}
 
-- (void)bleWifiActivator:(TuyaSmartBLEWifiActivator *)activator didReceiveBLEWifiConfigDevice:(TuyaSmartDeviceModel *)deviceModel error:(NSError *)error {
-    if (error) {
-        [SVProgressHUD showErrorWithStatus:error.localizedDescription ?: NSLocalizedString(@"Failed to configuration", "")];
-        return;
-    }
-    self.isSuccess = YES;
-    NSString *name = deviceModel.name ?: NSLocalizedString(@"Unknown Name", @"Unknown name device.");
-    [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@ %@" ,NSLocalizedString(@"Successfully Added", @"") ,name]];
-    [self.navigationController popViewControllerAnimated:YES];
-}
+//- (void)bleWifiActivator:(ThingSmartBLEWifiActivator *)activator didReceiveBLEWifiConfigDevice:(ThingSmartDeviceModel *)deviceModel error:(NSError *)error {
+//    if (error) {
+//        [SVProgressHUD showErrorWithStatus:error.localizedDescription ?: NSLocalizedString(@"Failed to configuration", "")];
+//        return;
+//    }
+//    self.isSuccess = YES;
+//    NSString *name = deviceModel.name ?: NSLocalizedString(@"Unknown Name", @"Unknown name device.");
+//    [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@ %@" ,NSLocalizedString(@"Successfully Added", @"") ,name]];
+//    [self.navigationController popViewControllerAnimated:YES];
+//}
     
 
 @end
