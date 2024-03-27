@@ -58,8 +58,7 @@ For more information about CocoaPods, see [CocoaPods Guides](https://guides.coco
 ## Initialize the SDK
 
 1. Open the project to apply the setting, `Target => General`, and set `Bundle Identifier` to the value from the Tuya developer center.
-2. Import a security image to the project, rename it as `t_s.bmp`, and then add it to `Project Setting => Target => Build Phases => Copy Bundle Resources`.
-3. Add the following content to the project file `PrefixHeader.pch`：
+2. Import header file：
 
 ```objective-c
 #import <ThingCommercialLightingKit/ThingCommercialLightingKit.h>
@@ -90,6 +89,3 @@ Tuya Smart Help Center: https://support.tuya.com/en/help
 
 Technical Support Console: https://service.console.tuya.com
 
-## License
-
-This Tuya Smart Commercial Lighting SDK Sample is licensed under the MIT License.
