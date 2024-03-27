@@ -64,7 +64,7 @@ For more information about CocoaPods, see [CocoaPods Guides](https://guides.coco
 #import <ThingCommercialLightingKit/ThingCommercialLightingKit.h>
 ```
 
-4. Open the file `AppDelegate.m`，and use the `App ID` and `App Secret` that are obtained from the development platform in the `[AppDelegate application:didFinishLaunchingWithOptions:]` method to initialize the SDK:
+3. Open the file `AppDelegate.m`，and use the `App ID` and `App Secret` that are obtained from the development platform in the `[AppDelegate application:didFinishLaunchingWithOptions:]` method to initialize the SDK:
 
 ```objective-c
 [ThingSmartSDK.sharedInstance startWithAppKey:TY_APP_KEY secretKey:TY_SECRET_KEY];
