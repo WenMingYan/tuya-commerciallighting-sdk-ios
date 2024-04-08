@@ -23,12 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.countryCodeTextField.text = @"86";
-    
-    self.accountTextField.text = @"qcTest@tuya.com";
-    self.passwordTextField.text = @"Tuya123456";
-
 }
 
 #pragma mark - IBAction
